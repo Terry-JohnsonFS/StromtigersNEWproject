@@ -3,4 +3,15 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="add_your_daily_events_to">Add your daily events to</string>
+    <string name="goal_3">Goal 3</string>
+    <string name="goal_1">Goal 1</string>
+    <string name="calendar_to_start_saving_your_time">calendar to start saving your time</string>
+    <string name="progress">Progress</string>
+    <string name="goal_2">Goal 2</string>
+    <string name="tracking">Tracking</string>
+    <string name="manage_your_daily_tasks">Manage Your Daily Tasks</string>
+    <string name="tracking2">Tracking</string>
+    <string name="tracking3">Tracking</string>
+    <string name="todo">TODO</string>
 </resources>
