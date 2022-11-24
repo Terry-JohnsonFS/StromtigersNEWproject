@@ -59,12 +59,8 @@ public class MainActivity extends AppCompatActivity {
         btnProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_navigation_home_to_profileFragment2);
-                /*FragmentManager manager = getSupportFragmentManager();
-                androidx.fragment.app.FragmentTransaction transaction = manager.beginTransaction();
-                transaction.add(R.id.nav_host_fragment_activity_main, new ProfileFragment());
-                transaction.addToBackStack(null);
-                transaction.commit();*/
+                Intent myIntent = new Intent(MainActivity.this, Profile_Activity.class);
+                startActivity(myIntent);
             }
         });
         btnProg = (Button) findViewById(R.id.button3);
@@ -79,89 +75,6 @@ public class MainActivity extends AppCompatActivity {
                 transaction1.commit();*/
             }
         });
-       /* name = (TextView) findViewById(R.id.editTextTextPersonName3);
-        goal1 = (TextView) findViewById(R.id.editTextTextPersonName2);
-        goal2 = (TextView) findViewById(R.id.editTextTextPersonName4);
-        goal3 = (TextView) findViewById(R.id.editTextTextPersonName5);
-        sharedpreferences = getSharedPreferences(mypreference,
-                Context.MODE_PRIVATE);
-        if (sharedpreferences.contains(Name)) {
-            name.setText(sharedpreferences.getString(Name, ""));
-        }
-        if (sharedpreferences.contains(Goal1)) {
-            goal1.setText(sharedpreferences.getString(Goal1, ""));
-        }
-        if (sharedpreferences.contains(Goal2)) {
-            goal2.setText(sharedpreferences.getString(Goal2, ""));
-        }
-        if (sharedpreferences.contains(Goal3)) {
-            goal3.setText(sharedpreferences.getString(Goal3, ""));
-        }
-        saveButton = (Button) findViewById(R.id.button9);
-        saveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String n = name.getText().toString();
-                String e = goal1.getText().toString();
-                String f = goal2.getText().toString();
-                String g = goal3.getText().toString();
-                SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString(Name, n);
-                editor.putString(Goal1, e);
-                editor.putString(Goal2, f);
-                editor.putString(Goal3, g);
-                editor.commit();
-
-            }
-        });
-        clearButton = (Button) findViewById(R.id.button10);
-        clearButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                name = (TextView) findViewById(R.id.editTextTextPersonName3);
-                goal1 = (TextView) findViewById(R.id.editTextTextPersonName2);
-                goal2 = (TextView) findViewById(R.id.editTextTextPersonName4);
-                goal3 = (TextView) findViewById(R.id.editTextTextPersonName5);
-                name.setText("");
-                goal1.setText("");
-                goal2.setText("");
-                goal3.setText("");
-            }
-        });
-        retrieveButton = (Button) findViewById(R.id.button11);
-        retrieveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                name = (TextView) findViewById(R.id.editTextTextPersonName3);
-                goal1 = (TextView) findViewById(R.id.editTextTextPersonName2);
-                goal2 = (TextView) findViewById(R.id.editTextTextPersonName4);
-                goal3 = (TextView) findViewById(R.id.editTextTextPersonName5);
-                sharedpreferences = getSharedPreferences(mypreference,
-                        Context.MODE_PRIVATE);
-
-                if (sharedpreferences.contains(Name)) {
-                    name.setText(sharedpreferences.getString(Name, ""));
-                }
-                if (sharedpreferences.contains(Goal1)) {
-                    goal1.setText(sharedpreferences.getString(Goal1, ""));
-                }
-                if (sharedpreferences.contains(Goal2)) {
-                    goal2.setText(sharedpreferences.getString(Goal2, ""));
-                }
-                if (sharedpreferences.contains(Goal3)) {
-                    goal3.setText(sharedpreferences.getString(Goal3, ""));
-                }
-            }
-        });
-        backButton = (Button) findViewById(R.id.button11);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentManager manager = getSupportFragmentManager();
-                androidx.fragment.app.FragmentTransaction transaction = manager.beginTransaction();
-                transaction.replace(R.id.nav_host_fragment_activity_main, new HomeFragment());
-            }
-        });*/
 
 
 
