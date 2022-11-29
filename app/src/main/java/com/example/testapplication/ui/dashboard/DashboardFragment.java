@@ -48,6 +48,7 @@ public class DashboardFragment extends Fragment {
                 progress = progress +1;
                 progressBar1.setProgress(progress);
 
+
             }
         });
         progressBar2 = (ProgressBar) root.findViewById(R.id.progressBar4);
