@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnProfile;
     Button btnProg;
+    Button btnGoals;
     Button retrieveButton;
     Button saveButton;
     Button clearButton;
@@ -73,6 +74,14 @@ public class MainActivity extends AppCompatActivity {
                 transaction1.replace(R.id.nav_host_fragment_activity_main, new DashboardFragment());
                 transaction1.addToBackStack(null);
                 transaction1.commit();*/
+            }
+        });
+        btnGoals = (Button) findViewById(R.id.button4);
+        btnGoals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, AddingHours.class);
+                startActivity(intent);
             }
         });
 
