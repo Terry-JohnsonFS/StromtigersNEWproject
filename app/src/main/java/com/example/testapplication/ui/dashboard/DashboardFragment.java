@@ -32,9 +32,13 @@ public class DashboardFragment extends Fragment {
     TextView goal1DF;
     TextView goal2DF;
     TextView goal3DF;
+    TextView displayprog1DF;
+    TextView displayprog2DF;
+    TextView displayprog3DF;
     int progbar1;
     int progbar2;
     int progbar3;
+    String Click2Start = "Track with +";
 
     SharedPreferences sharedPreferences2;
     public static final String mypreference2 = "mypref";
@@ -74,6 +78,10 @@ public class DashboardFragment extends Fragment {
         progbar2 = Integer.parseInt(sprogressbar2);
         progbar3 = Integer.parseInt(sprogressbar3);
 
+        displayprog1DF = (TextView) root.findViewById(R.id.textView9);
+        displayprog2DF = (TextView) root.findViewById(R.id.textView10);
+        displayprog3DF = (TextView) root.findViewById(R.id.textView11);
+
 
         progressBar1 = (ProgressBar) root.findViewById(R.id.progressBar3);
         if (progbar1 >= 1){
@@ -83,6 +91,7 @@ public class DashboardFragment extends Fragment {
             progressBar1.setMax(30);
         }
         progressBar1.setProgress(0);
+        displayprog1DF.setText(Click2Start);
         btn5 = (Button) root.findViewById(R.id.button5);
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,8 +99,9 @@ public class DashboardFragment extends Fragment {
                 int progress = progressBar1.getProgress();
                 progress = progress +1;
                 progressBar1.setProgress(progress);
-
-
+                if(progress<=progbar1){
+                    displayprog1DF.setText(progress + "/" + progbar1);
+                }
             }
         });
         progressBar2 = (ProgressBar) root.findViewById(R.id.progressBar4);
@@ -102,6 +112,7 @@ public class DashboardFragment extends Fragment {
             progressBar2.setMax(30);
         }
         progressBar2.setProgress(0);
+        displayprog2DF.setText(Click2Start);
         btn6 = (Button) root.findViewById(R.id.button6);
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,7 +120,9 @@ public class DashboardFragment extends Fragment {
                 int progress = progressBar2.getProgress();
                 progress = progress +1;
                 progressBar2.setProgress(progress);
-
+                if(progress <= progbar2){
+                    displayprog2DF.setText(progress + "/" + progbar2);
+                }
             }
         });
         progressBar3 = (ProgressBar) root.findViewById(R.id.progressBar5);
@@ -120,6 +133,7 @@ public class DashboardFragment extends Fragment {
             progressBar3.setMax(30);
         }
         progressBar3.setProgress(0);
+        displayprog3DF.setText(Click2Start);
         btn7 = (Button) root.findViewById(R.id.button7);
         btn7.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -127,7 +141,9 @@ public class DashboardFragment extends Fragment {
                 int progress = progressBar3.getProgress();
                 progress = progress +1;
                 progressBar3.setProgress(progress);
-
+                if(progress <= progbar3){
+                    displayprog3DF.setText(progress + "/" + progbar3);
+                }
             }
         });
         BtnBAck = (Button) root.findViewById(R.id.button);
