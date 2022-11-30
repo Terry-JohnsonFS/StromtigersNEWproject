@@ -29,6 +29,9 @@ public class DashboardFragment extends Fragment {
     ProgressBar progressBar3;
     Button btn7;
     Button BtnBAck;
+    TextView goal1DF;
+    TextView goal2DF;
+    TextView goal3DF;
     int progbar1;
     int progbar2;
     int progbar3;
@@ -38,6 +41,9 @@ public class DashboardFragment extends Fragment {
     public static final String HoursG1 = "HoursGoal1Key";
     public static final String HoursG2 = "HoursGoal2Key";
     public static final String HoursG3 = "HoursGoal3Key";
+    public static final String Goal1 = "Goal1Key";
+    public static final String Goal2 = "Goal2Key";
+    public static final String Goal3 = "Goal3Key";
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -49,8 +55,18 @@ public class DashboardFragment extends Fragment {
 
         final TextView textView = binding.editTextTextPersonName;
         dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        goal1DF = (TextView) root.findViewById(R.id.textView6);
+        goal2DF = (TextView) root.findViewById(R.id.textView7);
+        goal3DF = (TextView) root.findViewById(R.id.textView8);
 
         sharedPreferences2 = getContext().getSharedPreferences(mypreference2, Context.MODE_PRIVATE);
+        String goal1 = sharedPreferences2.getString(Goal1,"");
+        String goal2 = sharedPreferences2.getString(Goal2, "");
+        String goal3 = sharedPreferences2.getString(Goal3, "");
+        goal1DF.setText(goal1);
+        goal2DF.setText(goal2);
+        goal3DF.setText(goal3);
+
         String sprogressbar1 = sharedPreferences2.getString(HoursG1, "");
         String sprogressbar2 = sharedPreferences2.getString(HoursG2, "");
         String sprogressbar3 = sharedPreferences2.getString(HoursG3, "");
