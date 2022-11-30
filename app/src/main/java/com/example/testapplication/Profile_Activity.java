@@ -115,7 +115,8 @@ public class Profile_Activity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.nav_host_fragment_activity_main);
+                Intent intent = new Intent(Profile_Activity.this , MainActivity.class);
+                startActivity(intent);
             }
         });
 

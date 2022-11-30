@@ -1,8 +1,10 @@
 package com.example.testapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.Navigation;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +14,7 @@ import android.widget.TextView;
 public class AddingHours extends AppCompatActivity {
     Button BtnSave;
     Button BtnRet;
+    Button BtnBack;
     SharedPreferences sharedPreferences1;
     TextView textView;
     TextView textView3;
@@ -90,6 +93,14 @@ public class AddingHours extends AppCompatActivity {
                 if (sharedPreferences1.contains(HoursG3)) {
                     hoursG3.setText(sharedPreferences1.getString(HoursG3, ""));
                 }
+            }
+        });
+        BtnBack = (Button) findViewById(R.id.button15);
+        BtnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AddingHours.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }

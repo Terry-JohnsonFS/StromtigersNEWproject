@@ -1,5 +1,6 @@
 package com.example.testapplication.ui.dashboard;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.testapplication.MainActivity;
 import com.example.testapplication.R;
 import com.example.testapplication.databinding.FragmentDashboardBinding;
 
@@ -24,6 +26,7 @@ public class DashboardFragment extends Fragment {
     Button btn6;
     ProgressBar progressBar3;
     Button btn7;
+    Button BtnBAck;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -75,6 +78,14 @@ public class DashboardFragment extends Fragment {
                 progress = progress +1;
                 progressBar3.setProgress(progress);
 
+            }
+        });
+        BtnBAck = (Button) root.findViewById(R.id.button);
+        BtnBAck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), MainActivity.class);
+                startActivity(intent);
             }
         });
 
