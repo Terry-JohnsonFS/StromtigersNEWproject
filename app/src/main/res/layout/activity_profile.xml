@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/purple_500"
+    android:background="@color/teal_700"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Profile_Activity">
@@ -12,7 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Welcome please enter profile info or verify that it is still correct"
-        android:textSize="14dp"
+        android:textSize="22dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="-36dp"
         tools:layout_editor_absoluteY="50dp" />
@@ -23,9 +25,11 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:ems="10"
-        android:hint=" name (bob)"
+        android:hint=" Name (bob)"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,6 +42,8 @@
         android:ems="10"
         android:hint="Goal 2"
         android:inputType="textPersonName"
+        android:textStyle="bold"
+        android:textColor="@color/black"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,6 +58,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Goal 3"
+        android:textStyle="bold"
+        android:textColor="@color/black"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -80,6 +88,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Goal 1"
+        android:textStyle="bold"
+        android:textColor="@color/black"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView2"
@@ -103,12 +113,14 @@
         android:id="@+id/button11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Retrieve Info"
         android:clickable="true"
+        android:text="Retrieve Info"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView2" />
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.646" />
 
     <Button
         android:id="@+id/button12"
@@ -124,7 +136,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/button9" />
 
-
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="215dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginBottom="42dp"
+        android:text="Dark Mode"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="104dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
