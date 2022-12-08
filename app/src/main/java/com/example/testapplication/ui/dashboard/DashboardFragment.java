@@ -59,9 +59,9 @@ public class DashboardFragment extends Fragment {
 
         final TextView textView = binding.editTextTextPersonName;
         dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-        goal1DF = (TextView) root.findViewById(R.id.textView6);
-        goal2DF = (TextView) root.findViewById(R.id.textView7);
-        goal3DF = (TextView) root.findViewById(R.id.textView8);
+        goal1DF = root.findViewById(R.id.textView6);
+        goal2DF = root.findViewById(R.id.textView7);
+        goal3DF = root.findViewById(R.id.textView8);
 
         sharedPreferences2 = getContext().getSharedPreferences(mypreference2, Context.MODE_PRIVATE);
         String goal1 = sharedPreferences2.getString(Goal1,"");
@@ -78,12 +78,12 @@ public class DashboardFragment extends Fragment {
         progbar2 = Integer.parseInt(sprogressbar2);
         progbar3 = Integer.parseInt(sprogressbar3);
 
-        displayprog1DF = (TextView) root.findViewById(R.id.textView9);
-        displayprog2DF = (TextView) root.findViewById(R.id.textView10);
-        displayprog3DF = (TextView) root.findViewById(R.id.textView11);
+        displayprog1DF = root.findViewById(R.id.textView9);
+        displayprog2DF = root.findViewById(R.id.textView10);
+        displayprog3DF = root.findViewById(R.id.textView11);
 
 
-        progressBar1 = (ProgressBar) root.findViewById(R.id.progressBar3);
+        progressBar1 = root.findViewById(R.id.progressBar3);
         if (progbar1 >= 1){
             progressBar1.setMax(progbar1);
         }
@@ -92,19 +92,16 @@ public class DashboardFragment extends Fragment {
         }
         progressBar1.setProgress(0);
         displayprog1DF.setText(Click2Start);
-        btn5 = (Button) root.findViewById(R.id.button5);
-        btn5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int progress = progressBar1.getProgress();
-                progress = progress +1;
-                progressBar1.setProgress(progress);
-                if(progress<=progbar1){
-                    displayprog1DF.setText(progress + "/" + progbar1);
-                }
+        btn5 = root.findViewById(R.id.button5);
+        btn5.setOnClickListener(view -> {
+            int progress = progressBar1.getProgress();
+            progress = progress +1;
+            progressBar1.setProgress(progress);
+            if(progress<=progbar1){
+                displayprog1DF.setText(progress + "/" + progbar1);
             }
         });
-        progressBar2 = (ProgressBar) root.findViewById(R.id.progressBar4);
+        progressBar2 = root.findViewById(R.id.progressBar4);
         if (progbar2 >= 1){
             progressBar2.setMax(progbar2);
         }
@@ -113,19 +110,16 @@ public class DashboardFragment extends Fragment {
         }
         progressBar2.setProgress(0);
         displayprog2DF.setText(Click2Start);
-        btn6 = (Button) root.findViewById(R.id.button6);
-        btn6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int progress = progressBar2.getProgress();
-                progress = progress +1;
-                progressBar2.setProgress(progress);
-                if(progress <= progbar2){
-                    displayprog2DF.setText(progress + "/" + progbar2);
-                }
+        btn6 = root.findViewById(R.id.button6);
+        btn6.setOnClickListener(view -> {
+            int progress = progressBar2.getProgress();
+            progress = progress +1;
+            progressBar2.setProgress(progress);
+            if(progress <= progbar2){
+                displayprog2DF.setText(progress + "/" + progbar2);
             }
         });
-        progressBar3 = (ProgressBar) root.findViewById(R.id.progressBar5);
+        progressBar3 = root.findViewById(R.id.progressBar5);
         if (progbar3 >= 1){
             progressBar3.setMax(progbar3);
         }
@@ -134,25 +128,19 @@ public class DashboardFragment extends Fragment {
         }
         progressBar3.setProgress(0);
         displayprog3DF.setText(Click2Start);
-        btn7 = (Button) root.findViewById(R.id.button7);
-        btn7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int progress = progressBar3.getProgress();
-                progress = progress +1;
-                progressBar3.setProgress(progress);
-                if(progress <= progbar3){
-                    displayprog3DF.setText(progress + "/" + progbar3);
-                }
+        btn7 = root.findViewById(R.id.button7);
+        btn7.setOnClickListener(view -> {
+            int progress = progressBar3.getProgress();
+            progress = progress +1;
+            progressBar3.setProgress(progress);
+            if(progress <= progbar3){
+                displayprog3DF.setText(progress + "/" + progbar3);
             }
         });
-        BtnBAck = (Button) root.findViewById(R.id.button);
-        BtnBAck.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), MainActivity.class);
-                startActivity(intent);
-            }
+        BtnBAck = root.findViewById(R.id.button);
+        BtnBAck.setOnClickListener(view -> {
+            Intent intent = new Intent(getActivity(), MainActivity.class);
+            startActivity(intent);
         });
 
 
@@ -163,22 +151,6 @@ public class DashboardFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
-    }
-
-    public void IncrementBar3(View view){
-
-        int progress = progressBar1.getProgress();
-        progressBar1.setProgress(progress++);
-    }
-    public void IncrementBar4(View view) {
-        int progress = progressBar2.getProgress();
-        progressBar2.setProgress(progress++);
-
-    }
-    public void IncrementBar5(View view) {
-        int progress = progressBar3.getProgress();
-        progressBar3.setProgress(progress++);
-
     }
 
 

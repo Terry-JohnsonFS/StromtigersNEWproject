@@ -1,26 +1,18 @@
 package com.example.testapplication;
 
-import androidx.fragment.app.FragmentManager;
-import androidx.lifecycle.ViewModelProvider;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
-import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.example.testapplication.ui.home.HomeFragment;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import java.util.Collections;
 
@@ -32,7 +24,8 @@ public class ProfileFragment extends Fragment {
         return new ProfileFragment();
     }
 
-    String name, goal1, goal2, goal3;
+    String name;
+    String goal3;
     EditText textPersonName;
     EditText textGoal1;
     EditText textGoal2;
