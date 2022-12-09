@@ -43,7 +43,7 @@
             android:layout_height="50dp"
             android:layout_gravity="bottom"
             android:backgroundTint="@color/purple_500"
-            android:text="View Progress"
+            android:text="View Progress Dashboard"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -70,10 +70,10 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="bottom"
-            android:text="Create new goal"
             android:backgroundTint="@color/purple_500"
-            android:textStyle="bold"
-            android:textColor="@color/black"/>
+            android:text="Change Hours on Goals"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imageView2"

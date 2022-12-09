@@ -14,6 +14,7 @@ public class Profile_Activity extends AppCompatActivity {
     Button saveButton;
     Button clearButton;
     Button backButton;
+    Button HoursBtn;
     SharedPreferences sharedpreferences;
     TextView name;
     TextView goal1;
@@ -98,6 +99,11 @@ public class Profile_Activity extends AppCompatActivity {
         backButton = findViewById(R.id.button12);
         backButton.setOnClickListener(view -> {
             Intent intent = new Intent(Profile_Activity.this , MainActivity.class);
+            startActivity(intent);
+        });
+        HoursBtn = findViewById(R.id.button17);
+        HoursBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(Profile_Activity.this , AddingHours.class);
             startActivity(intent);
         });
 

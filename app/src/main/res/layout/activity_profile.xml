@@ -81,7 +81,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5"
         app:layout_constraintVertical_bias="0.0"
-        android:focusable="true" />
+        android:focusable="true"
+        android:background="@drawable/my_button_bg"/>
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
@@ -109,7 +110,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName5"
         app:layout_constraintTop_toTopOf="@+id/button9"
-        android:focusable="true" />
+        android:focusable="true"
+        android:background="@drawable/my_button_bg"/>
 
     <Button
         android:id="@+id/button11"
@@ -123,7 +125,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView2"
         app:layout_constraintVertical_bias="0.646"
-        android:focusable="true" />
+        android:focusable="true"
+        android:background="@drawable/my_button_bg"/>
 
     <Button
         android:id="@+id/button12"
@@ -138,7 +141,8 @@
         app:layout_constraintEnd_toStartOf="@+id/button9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/button9"
-        android:focusable="true" />
+        android:focusable="true"
+        android:background="@drawable/my_button_bg"/>
 
     <Switch
         android:id="@+id/switch1"
@@ -154,6 +158,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:text="Hours"
+        app:layout_constraintBottom_toBottomOf="@+id/button10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button10"
+        app:layout_constraintTop_toTopOf="@+id/button10"
+        android:background="@drawable/my_button_bg"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
