@@ -33,8 +33,8 @@ public class Profile_Activity extends AppCompatActivity {
         goal1 = findViewById(R.id.editTextTextPersonName2);
         goal2 = findViewById(R.id.editTextTextPersonName4);
         goal3 = findViewById(R.id.editTextTextPersonName5);
-        // commented out as it would not let you update goal names with this active
-       /* sharedpreferences = getSharedPreferences(mypreference,
+        // commented out as it would not let you update goal names with this active fixed just press clear first
+        sharedpreferences = getSharedPreferences(mypreference,
                 Context.MODE_PRIVATE);
         if (sharedpreferences.contains(Name)) {
             name.setText(sharedpreferences.getString(Name, ""));
@@ -47,7 +47,7 @@ public class Profile_Activity extends AppCompatActivity {
         }
         if (sharedpreferences.contains(Goal3)) {
             goal3.setText(sharedpreferences.getString(Goal3, ""));
-        }*/
+        }
         saveButton = findViewById(R.id.button9);
         saveButton.setOnClickListener(view -> {
             String n = name.getText().toString();

@@ -13,6 +13,7 @@ public class AddingHours extends AppCompatActivity {
     Button BtnSave;
     Button BtnRet;
     Button BtnBack;
+    Button Clearbtn;
     SharedPreferences sharedPreferences1;
     TextView textView;
     TextView textView3;
@@ -37,8 +38,8 @@ public class AddingHours extends AppCompatActivity {
         hoursG1 = findViewById(R.id.editTextTextPersonName6);
         hoursG2 = findViewById(R.id.editTextTextPersonName7);
         hoursG3 = findViewById(R.id.editTextTextPersonName8);
-        // commented out as it would not let you change what the hours were with this here
-        /*sharedPreferences1 = getSharedPreferences(mypreference1,
+        // commented out as it would not let you change what the hours were with this here fixed hit clear to change data
+        sharedPreferences1 = getSharedPreferences(mypreference1,
                 Context.MODE_PRIVATE);
         if (sharedPreferences1.contains(HoursG1)) {
             hoursG1.setText(sharedPreferences1.getString(HoursG1, ""));
@@ -48,7 +49,7 @@ public class AddingHours extends AppCompatActivity {
         }
         if (sharedPreferences1.contains(HoursG3)) {
             hoursG3.setText(sharedPreferences1.getString(HoursG3, ""));
-        }*/
+        }
         textView = findViewById(R.id.textView);
         textView3 = findViewById(R.id.textView3);
         textView4 = findViewById(R.id.textView4);
@@ -92,6 +93,15 @@ public class AddingHours extends AppCompatActivity {
         BtnBack.setOnClickListener(view -> {
             Intent intent = new Intent(AddingHours.this, MainActivity.class);
             startActivity(intent);
+        });
+        Clearbtn = findViewById(R.id.button16);
+        Clearbtn.setOnClickListener(view -> {
+            hoursG1 = findViewById(R.id.editTextTextPersonName6);
+            hoursG2 = findViewById(R.id.editTextTextPersonName7);
+            hoursG3 = findViewById(R.id.editTextTextPersonName8);
+            hoursG1.setText("");
+            hoursG2.setText("");
+            hoursG3.setText("");
         });
     }
 }
