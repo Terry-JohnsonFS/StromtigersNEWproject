@@ -25,7 +25,6 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:ems="10"
-        android:hint="@string/name_bob"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textStyle="bold"
@@ -33,14 +32,15 @@
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView2" />
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        android:autofillHints="Name(Bob)" />
 
     <EditText
         android:id="@+id/editTextTextPersonName4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Goal 2"
+        android:autofillHints="Goal 2"
         android:inputType="textPersonName"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -57,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Goal 3"
+        android:autofillHints="Goal 3"
         android:textStyle="bold"
         android:textColor="@color/black"
         android:inputType="textPersonName"
@@ -89,7 +89,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Goal 1"
+        android:autofillHints="Goal 1"
         android:textStyle="bold"
         android:textColor="@color/black"
         android:inputType="textPersonName"
